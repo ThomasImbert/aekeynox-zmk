@@ -14,7 +14,7 @@
 // #define KB_LAYOUT_BEPO
 // #define KB_LAYOUT_BEPOLAR
 // #define KB_LAYOUT_DVORAK
-// #define KB_LAYOUT_ERGOL
+#define KB_LAYOUT_ERGOL
 // #define KB_LAYOUT_ERGLACE
 // #define KB_LAYOUT_QWERTY_INTL
 // #define KB_LAYOUT_QWERTY_LAFAYETTE
@@ -23,7 +23,7 @@
 // Uncomment one of the following lines if the host computer doen't run Windows.
 
 // #define MACOS
-// #define LINUX
+#define LINUX
 
 
 /******************************************************************************
@@ -64,7 +64,7 @@
 
 // #define HT_NONE
 // #define HT_THUMB_TAPS
-// #define HT_HOME_ROW_MODS  // (default behavior)
+#define HT_HOME_ROW_MODS  // (default behavior)
 // #define HT_TWO_THUMB_KEYS
 
 // Timing is key! Keep the default value if unsure.
@@ -74,6 +74,7 @@
 // Keep this value high if you struggle with home row mods.
 
 // #define TAPPING_TERM 300
+#define TAPPING_TERM 250
 
 // This defines how quickly (in ms) you need to press and release a hold-tap
 // with the "hold-preferred" flavor for it to be considered a tap. These
@@ -86,6 +87,7 @@
 // key presses is lower than `QUICK_TAP`, the tap-hold will hold the tap action
 // instead of the hold action. Again, keep the default value if unsure.
 
+// #define QUICK_TAP 200
 // #define QUICK_TAP 200
 
 // For more information on how hold-taps operate, feel free to read ZMK’s docs:
@@ -102,7 +104,7 @@
 //  + Escape under the left thumb (direct access)
 // Highly recommended for Vim users, obviously. :-)
 
-// #define VIM_NAVIGATION
+#define VIM_NAVIGATION
 
 // [Experimental]
 // Uncomment the following line to enable the "mod-hold behavior" on the left
@@ -110,12 +112,12 @@
 // when entering the navigation layer, Alt will only be released when nav is
 // released. This enables one-handed alt-tabs, but may cause unwanted side effects.
 
-// #define ENABLE_MOD_HOLD_NAVIGATION
+#define ENABLE_MOD_HOLD_NAVIGATION
 
 // Uncomment the following line to enable shift as a pinky HRM.
 // Useful for combined shortcuts, but NOT MEANT to type text!
 
-// #define HRM_SHIFT
+#define HRM_SHIFT
 
 // [Experimental]
 // Uncomment the following line to enable a mod-hold behavior when holding
