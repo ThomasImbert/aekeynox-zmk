@@ -127,8 +127,8 @@
   		display-name = "GameHomeRTS";
       bindings = <SELENIUM_KEYMAP_BINDINGS(
   			&kp F6   ,  &kp N0     &kp N6     &kp N7       &kp N8     &kp N9  ,         &none    S_N7  S_N8  S_N9  &kp FSLH  ,   &trans ,
-  			&kp TAB  ,  &kp F5     &kp F1     &kp F2       &kp F3     &kp F4  ,         &kp BSPC S_N4  S_N5  S_N6  S_N0      ,   &trans ,
-  			&trans   ,  &kp N5     &kp N1     &kp N2       &kp N3     &kp N4  ,         &none    S_N1  S_N2  S_N3  &kp DOT   ,   &trans ,
+  			&kp TAB  ,  &kp F5     &kp F1     &kp F2       &kp F3     &kp F4  ,         &kp BSPC S_N4  S_N5  S_N6  S_N0      ,   &trans ,
+  			&trans   ,  &kp N5     &kp N1     &kp N2       &kp N3     &kp N4  ,         &none    S_N1  S_N2  S_N3  &none     ,   &trans ,
   		                                       &none  , &none  , &none      ,         &trans  ,  &trans  ,  &trans
   		)>;
   	};
