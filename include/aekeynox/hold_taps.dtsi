@@ -149,8 +149,8 @@
   #define NAV_LTHUMB_TUCK   &kp LS(TAB)
   #define NAV_LTHUMB_REACH  &none
 #else
-  //#define NAV_LTHUMB_TUCK   &EZ_SK(LSHIFT)
-  #define NAV_LTHUMB_TUCK   &EZ_SKC(LSHIFT)
+  #define NAV_LTHUMB_TUCK   &EZ_SK(LSHIFT)
+//  #define NAV_LTHUMB_TUCK   &EZ_SKC(LSHIFT)
   #define NAV_LTHUMB_REACH  &kp LS(TAB)
 #endif
 
