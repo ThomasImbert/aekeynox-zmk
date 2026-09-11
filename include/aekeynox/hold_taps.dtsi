@@ -149,7 +149,8 @@
   #define NAV_LTHUMB_TUCK   &kp LS(TAB)
   #define NAV_LTHUMB_REACH  &none
 #else
-  #define NAV_LTHUMB_TUCK   &EZ_SK(LSHIFT)
+  //#define NAV_LTHUMB_TUCK   &EZ_SK(LSHIFT)
+  #define NAV_LTHUMB_TUCK   &EZ_SKC(LSHIFT)
   #define NAV_LTHUMB_REACH  &kp LS(TAB)
 #endif
 
@@ -157,7 +158,7 @@
 /**
  * Timing is Key!
  */
-
+#define EZ_SKC(mod)   bskw (mod) (mod)
 #define EZ_SL(layer)  bsl (layer) (layer)
 #define EZ_SK(mod)    bsk (mod) (mod)
 #define EZ_LSK(mod)   lbsk (mod) (mod)
@@ -243,6 +244,15 @@
       flavor = "tap-preferred";
       bindings = <&kp>, <&osm>;
       hold-while-undecided;
+    };
+
+    OMIT_IF_NO_REF bskw: better_sticky_key_while_undecided {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <SHORT_TAPPING_TERM>;
+      quick-tap-ms = <QUICK_TAP>;
+      flavor = "hold-while-undecided";
+      bindings = <&kp>, <&osm>;
     };
 
     // mod‐morph to have Capslock on double‐tap Shift
