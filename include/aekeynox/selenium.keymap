@@ -109,8 +109,8 @@
   	fn_media_layer: fn_media_layer {
   		display-name = "FnMedia";
       bindings = <SELENIUM_KEYMAP_BINDINGS(
-  			&trans , &kp F1  &kp F2  &kp F3  &kp F4  &none    ,     H_L C_AL_LOCK  &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_UP   &kp SLCK     ,  &to GAME_QWERTS_LAYER   ,
-  			&trans , &kp F5  &kp F6  &kp F7  &kp F8  &none    ,     &kp C_PREV     H_J C_PP      H_K C_MUTE   &kp C_NEXT     H_SEMI PSCRN ,  &to GAME_QWERTFPS_LAYER ,
+  			&trans , &kp F1  &kp F2  &kp F3  &kp F4  &none    ,     &kp C_AL_LOCK  &kp C_VOL_DN  &kp C_VOL_UP &kp C_BRI_UP   &kp SLCK     ,  &to GAME_QWERTS_LAYER   ,
+  			&trans , &kp F5  &kp F6  &kp F7  &kp F8  &none    ,     &kp C_PREV     &UH1 C_PP     &UH2 C_MUTE  &UH3 C_NEXT    &UH4 PSCRN   ,  &to GAME_QWERTFPS_LAYER ,
   			&trans , &kp F9  &kp F10 &kp F11 &kp F12 &none    ,     &none          &none         &none        &kp C_BRI_DN   &kp INS      ,  &trans                  ,
   			&trans , &trans , &bootloader                     ,     &sys_reset  , &trans  , &studio_unlock
   		)>;
