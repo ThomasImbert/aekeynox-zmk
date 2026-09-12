@@ -45,6 +45,8 @@
 #ifdef ENABLE_HOME_ROW_MODS
   #define H1 hrm ALT_CTL
   #define H2 hrm CTL_CMD
+  #define H2L hrmh CTL_CMD
+// H2L for left hand ctrl homerow mod with hold-while-undecided behavior for mouse+control
   #define H3 hrm GUI_OPT
   #define H5 hrmh LSHIFT
 #else
@@ -184,7 +186,6 @@
       quick-tap-ms = <QUICK_TAP>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
-      hold-while-undecided;
     };
 
     OMIT_IF_NO_REF hrmh: homerow_mods_hold {
