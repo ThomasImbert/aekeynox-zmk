@@ -184,6 +184,7 @@
       quick-tap-ms = <QUICK_TAP>;
       flavor = "tap-preferred";
       bindings = <&kp>, <&kp>;
+      hold-while-undecided;
     };
 
     OMIT_IF_NO_REF hrmh: homerow_mods_hold {
