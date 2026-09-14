@@ -43,15 +43,17 @@
     // 0. Base layer -- keep the QWERTY key codes to use your OS keyboard layout
     //               -- the Space Cadet layer-tap on the right can be replaced by an AltGr/Enter mod-tap
     //               -- adjust the homerow mods with the #define statements above
+    // added sticky layer instead of LHOME for mirror layer access
     base_layer: base_layer {
       display-name = "Base";
       bindings = <SELENIUM_KEYMAP_BINDINGS(
-        &kp LTOP   ,  &kp Q  &kp W  &kp E  &kp R  &kp T   ,   &kp Y  &kp U  &kp I     &kp O   &kp P     ,  &kp RTOP   ,
-        &kp LHOME  ,  &H4 A  &H3 S  &H2L D &H1 F  &kp G   ,   &kp H  &H1 J  &H2 K     &H3 L   &H4 SEMI  ,  &kp RHOME  ,
-        &kp LSHIFT ,  &kp Z  &kp X  &kp C  &kp V  &kp B   ,   &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH  ,  &kp RSHIFT ,
-                LTHUMB_TUCK , LTHUMB_HOME , LTHUMB_REACH   ,   RTHUMB_REACH , RTHUMB_HOME , RTHUMB_TUCK
+        &kp LTOP             ,  &kp Q  &kp W  &kp E  &kp R  &kp T   ,   &kp Y  &kp U  &kp I     &kp O   &kp P     ,  &kp RTOP   ,
+        &EZ_SL(MIRROR_LAYER) ,  &H4 A  &H3 S  &H2L D &H1 F  &kp G   ,   &kp H  &H1 J  &H2 K     &H3 L   &H4 SEMI  ,  &kp RHOME  ,
+        &kp LSHIFT           ,  &kp Z  &kp X  &kp C  &kp V  &kp B   ,   &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH  ,  &kp RSHIFT ,
+                         LTHUMB_TUCK , LTHUMB_HOME , LTHUMB_REACH   ,   RTHUMB_REACH , RTHUMB_HOME , RTHUMB_TUCK
        )>;
      };
+
     // 1. Symbols layer -- with Ergo-L, basically just an AltGr layer with custom thumb keys
     //                  -- can be redefined for non-AltGr layouts such as QWERTY-ANSI
     symbols_layer: symbols_layer {
@@ -93,13 +95,14 @@
   	// 4. NumRow layer -- bring the numbers to the homerow, keep shift+numbers for shortcuts and symbols
   	//                 -- space becomes shift+space, which is a no-break space with some OS layouts (e.g. Ergo-L)
   	//                 -- best used along with the VimNav layer
+    // added sym left bottom row for additional keys when using one hand on keyboard for hotkeys purposes in programs using mouse
   	num_row_layer: num_row_layer {
   		display-name = "NumRow";
       bindings = <SELENIUM_KEYMAP_BINDINGS(
-        &trans ,  &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)                            ,    &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) , &trans ,
-  			&trans ,  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                                 ,    &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     , &trans ,
-  			&trans ,  &none      &none      &none      &none      &none                                  ,    S_MINUS    S_COMMA    S_DOT      S_COLON    S_FSLH     , &trans ,
-  			                            &trans ,  &kp RS(SPACE) , &trans                                 ,    &trans  , &kp LS(SPACE) , &kp RALT
+        &trans ,  &kp RS(N1) &kp RS(N2) &kp RS(N3) &kp RS(N4) &kp RS(N5)      ,    &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) , &trans ,
+  			&trans ,  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          ,    &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     , &trans ,
+  			&trans ,  S_TILDE    S_LBKT     S_RBKT     S_HASH     S_UNDER         ,    S_MINUS    S_COMMA    S_DOT      S_COLON    S_FSLH     , &trans ,
+  			                            &trans ,  &kp RS(SPACE) , &trans          ,    &trans  , &kp LS(SPACE) , &kp RALT
   		)>;
   	};
 
@@ -188,6 +191,20 @@
                                                                &none ,  &none ,  &trans      ,   &trans  , &trans  , &trans
       )>;
     };
+
+    // 12. mirror layer -- keep the QWERTY key codes to use your OS keyboard layout
+    // no homerow mods, right hand under left hand, to get access to additional alpha keys for programs used with mouse
+    // affords more possible available and reachable hotkeys with 1 hand
+    mirror_layer: mirror_layer {
+      display-name = "Mirror";
+      bindings = <SELENIUM_KEYMAP_BINDINGS(
+        &kp LTOP   ,  &kp P     &kp O    &kp I      &kp U  &kp Y   ,   &kp Y  &kp U  &kp I     &kp O   &kp P     ,  &kp RTOP   ,
+        &kp LHOME  ,  &kp SEMI  &kp L    &kp K      &H1 J  &kp H   ,   &kp H  &H1 J  &H2 K     &H3 L   &H4 SEMI  ,  &kp RHOME  ,
+        &kp LSHIFT ,  &kp FSLH  &kp DOT  &kp COMMA  &kp M  &kp N   ,   &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH  ,  &kp RSHIFT ,
+                        LTHUMB_TUCK , LTHUMB_HOME , LTHUMB_REACH   ,   RTHUMB_REACH , RTHUMB_HOME , RTHUMB_TUCK
+       )>;
+     };
+
 	};
 };
 
