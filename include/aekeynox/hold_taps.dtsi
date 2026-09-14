@@ -258,6 +258,7 @@
       hold-while-undecided;
     };
 
+      /*
     // mod‐morph to have Capslock on double‐tap Shift
     OMIT_IF_NO_REF shift_caps: shift_caps {
       compatible = "zmk,behavior-mod-morph";
@@ -271,6 +272,7 @@
       #binding-cells = <0>;
       bindings = <&macro_tap &kp K_CANCEL>, <&caps_word>;
     };
+*/
 
     // mod-morphs to restore Shift+Space and Ctrl+Backspace for certain keymaps
     OMIT_IF_NO_REF magic_backspace: magic_backspace {

@@ -73,7 +73,7 @@
         &trans     ,  X_REDO    X_CTL_W  &vim_prev &vim_next &kp DEL   ,      &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL , &trans ,
         &caps_word ,  X_ALL     X_SAVE   X_SHTAB   &kp TAB   &kp F2    ,      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none   , &trans ,
         &trans     ,  X_UNDO    X_CUT    X_COPY    X_PASTE   &kp SPACE ,      X_MSC_L  X_MSC_D   X_MSC_U   X_MSC_R   &none   , &trans ,
-                &kp CAPS , &sc FN_MEDIA_LAYER DEL , &mo NUM_ROW_LAYER  ,      &trans ,  &mo FN_MEDIA_LAYER , &EZ_LSK(RALT)
+                   &none , &sc FN_MEDIA_LAYER DEL , &mo NUM_ROW_LAYER  ,      &trans ,  &mo FN_MEDIA_LAYER , &EZ_LSK(RALT)
       )>;
     };
 
